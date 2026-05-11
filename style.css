@@ -1,0 +1,131 @@
+/* Reset & basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #dfedee 0%, #0e2545 100%);
+}
+
+/* Container */
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Card */
+.weather-card {
+  background: rgba(121, 144, 194, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.weather-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  transform: scale(1.05);
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #ff7e5f;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Weather Info */
+.weather-info {
+  margin-top: 20px;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.details {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+/* Weather icon placeholder */
+.weather-icon {
+  font-size: 5rem;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .weather-card {
+    padding: 30px 20px;
+  }
+
+  .temp {
+    font-size: 2.5rem;
+  }
+
+  button, input {
+    font-size: 0.9rem;
+  }
+}
